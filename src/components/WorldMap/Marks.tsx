@@ -33,9 +33,10 @@ export const Marks = ({
           <path className="sphere" d={path({ type: 'Sphere' }) as string} />
           <path className="graticules" d={path(graticule()) as string} />
           {countries.features.map(feature => {
-            console.log(feature)
+            // console.log(feature)
             const country = mapByCountry.get(Number(feature.id));
             const centroid = projection(geoCentroid(feature));
+            // console.log(colorScale(colorValue(country)));
 
             return (
               <path className="land" 

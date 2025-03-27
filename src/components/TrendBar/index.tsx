@@ -4,9 +4,10 @@ import { AxisX } from './AxisX';
 import { AxisY } from './AxisY';
 import { Marks } from './Marks';
 import Gap from '../../models/Gap';
-import { getGapsByCountryId } from '../../api/backendClient';
 import { index, scaleBand, scaleLinear, scaleOrdinal, stack } from 'd3';
 import { ColorLegend } from './ColorLegend';
+import { getGenderGaps } from '../../api/gitGistClient';
+
 
 
 const margin = { top: 10, right: 200, bottom: 15, left: 200 };
@@ -21,15 +22,17 @@ const parityDimensions = ["Health and Survival", "Educational Attainment", "Econ
 
 export const TrendBar = ({width, height, setClickedYear , clickedYear, clickedCountry}) => {
   
+
   const [gaps, setGaps] = useState<Gap[]>();
   const [hoveredValue, setHoveredValue] = useState(null);
 
   useEffect(() => {
-    getGapsByCountryId(clickedCountry)
-          .then(data => setGaps(data))
-      }, [clickedCountry]);
-  
-  if (!gaps) {
+    getGenderGaps().then((data: Gap[]) => {
+      setGaps(data.filter(gap => gap.countryId === clickedCountry));
+    });
+  }, [clickedCountry]); 
+
+  if (!gaps || !gaps.length) {
     return <pre>Loading...</pre>;
   }
 
@@ -49,7 +52,7 @@ export const TrendBar = ({width, height, setClickedYear , clickedYear, clickedCo
       .value(([, group], key) => group.get(key).subGap)
     (index(wideToLong, s => s.year, s => s.subType))
 
-  console.log(stacked)  
+  // console.log(stacked)  
 
   const xValue = (i) => String(i + 2005)
   const xScale = scaleBand()

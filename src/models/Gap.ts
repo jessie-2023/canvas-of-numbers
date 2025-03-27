@@ -1,10 +1,10 @@
 export default interface Gap
 {
-    id: number;
-    countryId: number; // Foreign Key
-    countryName: string; // Navigation Property
-    regionId: number;
-    regionName: string; // Navigation Property
+    // id: number;
+    countryId: number; 
+    countryName: string; 
+    // regionId: number;
+    regionName: string; 
     year: number;
     generalGap: number;
     healthGap: number;
