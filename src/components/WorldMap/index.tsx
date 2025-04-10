@@ -7,7 +7,7 @@ import WorldAtlas from '../../models/WorldAtlas';
 import getWorldAtlas from '../../api/worldAtlasClient';
 import { scaleSequential } from 'd3-scale';
 import { interpolateGnBu as colorGradience, max, min } from 'd3';
-import { ColorLegend } from './colorLegend';
+import { ColorLegend } from './ColorLegend';
 import Gap from '../../models/Gap';
 import { getGenderGaps } from '../../api/gitGistClient';
 

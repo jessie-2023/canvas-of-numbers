@@ -1,6 +1,6 @@
 import { geoNaturalEarth1, geoPath, geoGraticule, geoCentroid } from 'd3';
-import WorldAltas from '../../models/WorldAtlas';
-import { useMemo, useState } from 'react';
+// import WorldAltas from '../../models/WorldAtlas';
+import { useState } from 'react';
 import Gap from '../../models/Gap';
 
 

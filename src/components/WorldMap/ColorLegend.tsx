@@ -1,5 +1,5 @@
 import { scaleLinear } from "d3-scale";
-import { interpolateGnBu as colorGradience } from "d3";
+// import { interpolateGnBu as colorGradience } from "d3";
 
 interface ColorLegendProps {
   colorScale: (value: number) => string;

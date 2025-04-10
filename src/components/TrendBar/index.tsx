@@ -11,7 +11,7 @@ import { getGenderGaps } from '../../api/gitGistClient';
 
 
 const margin = { top: 10, right: 200, bottom: 15, left: 200 };
-const xAxisLabelOffset = 54;
+// const xAxisLabelOffset = 54;
 const yAxisLabelOffset = 30;
 // const xAxisTickFormat = timeFormat('%m/%d/%Y');
 const fadeOpacity = 0.1;
