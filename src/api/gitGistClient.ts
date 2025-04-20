@@ -17,7 +17,7 @@ export const getGenderGaps = async (): Promise<Gap[]> => {
         countryId: +d.countryId 
     }));
     // console.log("loaded data:", data)
-    return data as Gap[];
+    return (data as Gap[]).sort((a, b) => a.year - b.year);
 }
 
 

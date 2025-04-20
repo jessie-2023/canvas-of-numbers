@@ -28,7 +28,7 @@ export const TrendBar = ({width, height, setClickedYear , clickedYear, clickedCo
 
   useEffect(() => {
     getGenderGaps().then((data: Gap[]) => {
-      setGaps(data.filter(gap => gap.countryId === clickedCountry));
+      setGaps(data.filter(gap => gap.countryId === clickedCountry).sort(gap => gap.year));
     });
   }, [clickedCountry]); 
 
@@ -75,7 +75,7 @@ export const TrendBar = ({width, height, setClickedYear , clickedYear, clickedCo
   const hoveredDimension = stacked.filter(s => hoveredValue === s.key);
 
   return (<>
-    <rect width={width} height={height} fill="red" opacity={0.05} />
+    <rect width={width} height={height} fill="red" opacity={0.02} />
       <g transform={`translate(${margin.left},${margin.top})`}>
         <AxisX
           xScale={xScale}
