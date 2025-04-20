@@ -12,7 +12,11 @@
 .van-gogh {
     @include constants.text(demoblue, plain, paragraph);
     text-align: right;
-    // font-weight: bold;
+
+}
+.feel {
+    @include constants.text(green, plain, paragraph);
+    
 }
 
 .title {

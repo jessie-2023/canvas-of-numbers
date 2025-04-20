@@ -1,3 +1,25 @@
+@use '../../styles/constants.scss' as constants;
+@use "sass:map";
+
+.starting-point {
+  @include constants.text(main, plain, subheading);
+  text-align: left;
+}
+.dataviz-title {
+  @include constants.text(demoblue, fancy, subheading);
+  background-color: #F2DA5760; // 80 = ~50% opacity
+  
+}
+.reasoning-line {
+  background-color: #688BAB60;
+  text-align: left;
+}
+
+.hook, .source {
+  font-size: map.get(constants.$font-sizes, secondary);
+  text-align: left;
+}
+
 // world map
 .marks .sphere {
     // fill: transparent;

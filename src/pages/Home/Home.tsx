@@ -4,15 +4,15 @@ import './Home.scss';
 const questions = [
   {
     id: "gender-gap",
-    title: "How have gender gaps evolved globally over time?",
+    title: "Why women fight?",
     topic: "Gender",
     status: "✅ Visualized",
     link: "/gender-gap",
   },
   {
     id: "canadian-federalism",
-    title: "Is the idea of a united Canada realistic given its provincial disparities?",
-    topic: "Federalism",
+    title: "Why both liberals and conservatives call for united Canada in response to Trump-trouble?",
+    topic: "Canada",
     status: "🧪 Data collected",
     link: "/canadian-federalism",
   },
@@ -29,8 +29,7 @@ export default function Home() {
           Inspired by Van Gogh's bold spirit, Canvas of Numbers is more than just a data visualization tool — 
           it's a journey to uncover the deeper truths hidden behind the data. 
           Just as Van Gogh painted the emotions and essence of the world beyond the surface, 
-          this platform helps you explore the invisible patterns and forces shaping the world, 
-          one dataset at a time.
+          this platform helps you explore <strong className="feel">— and feel —</strong> the invisible patterns and forces shaping our world through reliable numbers.
           </em></p>
         </div>
       </div>

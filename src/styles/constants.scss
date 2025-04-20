@@ -38,6 +38,9 @@ $font-colors: (
   main: #635F5D,
   light: #8E8883,
   demoblue: #688BAB,
+  purple: #8E6C8A,
+  green: #0F8C79,
+  background: #EFECEA,
 );
 
 $font-styles: (
@@ -46,6 +49,7 @@ $font-styles: (
 );
 
 $font-sizes: (
+  secondary: clamp(0.625rem, 0.538rem + 0.4348vw, 0.875rem), // 10 - 14
   paragraph: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem), // 16- 18
   subheading: clamp(1.25rem, 1.0761rem + 0.8696vw, 1.75rem), // 20 - 28
   heading: clamp(1.5rem, 1.1522rem + 1.7391vw, 2.5rem), // 24 - 40
