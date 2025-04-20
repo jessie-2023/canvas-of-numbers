@@ -1,0 +1,32 @@
+@use '../../styles/constants.scss' as constants;
+
+.van-gogh-background {
+    background-image: url('../../assets/vangogh.png');
+    background-size: cover;           /* Ensures the image covers the entire container */
+    background-position: center;      /* Centers the image */
+    background-repeat: no-repeat;     /* Prevents the image from repeating */
+    max-width: 1280px;                     /* Makes it span the full width of the viewport */
+    height: 400px;                    /* Adjust based on the height you want */
+}
+
+.van-gogh {
+    @include constants.text(demoblue, plain, paragraph);
+    text-align: right;
+    // font-weight: bold;
+}
+
+.title {
+    @include constants.text(light, fancy, title);
+    text-align: center;
+}
+  
+.intro {
+    @include constants.text(main, fancy, subheading);
+    text-align: center;
+}
+
+.gallery {
+    @include constants.text(light, plain, heading);
+    text-align: left;
+}
+

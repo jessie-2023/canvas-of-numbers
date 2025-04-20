@@ -1,0 +1,27 @@
+// world map
+.marks .sphere {
+    // fill: transparent;
+    fill: blue; opacity: 0.1;
+  }
+.marks .interiors {
+  fill: none;
+  stroke: #b0bfc2;
+}
+.marks .graticules, .tick line {
+  fill: none;
+  stroke: #d4d1d1;
+}
+.marks .country-label {
+  font-size: 1em;
+  stroke:#8E8883
+}
+
+.tick text {
+  fill: #8E8883;
+  font-size: 0.7em;
+}
+
+.axis-label {
+  font-size: 0.7em;
+  fill: #635F5D;
+}

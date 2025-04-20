@@ -1,0 +1,68 @@
+@use "sass:map";
+
+// media
+$desktopMinWidth: 1024px;
+$tabletMinWidth: 768px;
+
+@mixin tablet {
+  @media (min-width: $tabletMinWidth) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktopMinWidth) {
+    @content;
+  }
+}
+
+.gutter {
+  position: relative;
+  padding: 0px 4px;
+
+  @include tablet {
+    padding: 0px 12px;
+  }
+
+  @include desktop {
+    padding: 0px 36px;
+  }
+}
+
+.layout {
+  position: relative;
+}
+
+// text font
+$font-colors: (
+  main: #635F5D,
+  light: #8E8883,
+  demoblue: #688BAB,
+);
+
+$font-styles: (
+  fancy: ("Titillium Web", sans-serif),
+  plain: (Arial, Helvetica, sans-serif),
+);
+
+$font-sizes: (
+  paragraph: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem), // 16- 18
+  subheading: clamp(1.25rem, 1.0761rem + 0.8696vw, 1.75rem), // 20 - 28
+  heading: clamp(1.5rem, 1.1522rem + 1.7391vw, 2.5rem), // 24 - 40
+  title: clamp(2.25rem, 1rem + 2.5vw, 3rem), // 36 - 48
+);
+
+@mixin text($textColor, $textStyle, $textSize) {
+  color: map.get($font-colors, $textColor);
+  font-family: map.get($font-styles, $textStyle);
+  font-size: map.get($font-sizes, $textSize);
+}
+
+
+@mixin padding($size: 1) {
+  padding: calc($size * 4px);
+}
+
+@mixin margin($size: 1) {
+  margin: calc($size * 4px);
+}

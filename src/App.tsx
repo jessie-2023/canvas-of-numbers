@@ -1,7 +1,8 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.scss'
-import Home from './pages/Home'
-import GenderGap from './pages/GenderGap'
+import './styles/constants.scss'
+import Home from './pages/Home/Home'
+import GenderGap from './pages/GenderGap/GenderGapPage'
 
 
 function App()
