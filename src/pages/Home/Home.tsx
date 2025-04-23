@@ -53,7 +53,7 @@ export default function Home() {
       <h2>Welcome to the Gallery of Questions</h2>
       {/* Row 4: display */}
       <div className="row text-center">
-        <div className="col-md-3 map">
+        <div className="col-md-2 map">
           <p>📌 Analytical Roadmap</p>
           <ul>
             <li>Start with a question →</li>
@@ -66,10 +66,10 @@ export default function Home() {
           </ul>
         </div>
         {questions.map((q) => (
-          <div key={q.id} className="col-md-3 frame">
+          <div key={q.id} className="col-md-4 frame">
             <div className="in-frame">
               <Link to={q.link}>
-                <p className="intro mt-5">
+                <p className="in-frame-question mt-5">
                 🔍 {q.title}
                 </p>
               </Link>

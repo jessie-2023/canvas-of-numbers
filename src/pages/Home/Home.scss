@@ -56,12 +56,6 @@
 //     padding: 1.5rem; /* Default internal padding */
 // }
 
-.in-frame {
-    width: 100%;
-    max-width: 75%; /* Prevent content from touching edges */
-    margin: 0 auto;
-    text-align: center;
-}
 .frame {
     aspect-ratio: 555 / 674; /* or whatever matches your frame image */
     width: 100%;
@@ -75,12 +69,22 @@
     overflow: hidden;
   }
   
-//   .in-frame {
-//     position: absolute;
-//     inset: 0;
-//     padding: 1.5em;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
+  .in-frame {
+    position: absolute;
+    inset: 0;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+// .in-frame {
+//     width: 100%;
+//     max-width: 75%; /* Prevent content from touching edges */
+//     margin: 0 auto;
 //     text-align: center;
-//   }
+// }
+
+.in-frame-question {
+    @include constants.text(main, fancy, subsubheading);
+}
