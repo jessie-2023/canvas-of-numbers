@@ -29,12 +29,10 @@ export const ColorLegend = ({ colorScale, width = 300, height = 50 }: ColorLegen
           ))}
         </linearGradient>
       </defs>
-      <rect width={legendWidth} height={legendHeight} fill="url(#legend-gradient)" />
-
+      <rect x={40} y={0} width={legendWidth} height={legendHeight + 15} transform={`translate(${-30}, ${0})`} fill="url(#legend-gradient)" />
       {/* Ticks & Labels */}
       {tickValues.map((tick, i) => (
-        <g key={i} transform={`translate(${legendScale(tick)}, ${legendHeight+10}) rotate(90)`}>
-          {/* <line x2={5} stroke="black" /> */}
+        <g key={i} transform={`translate(${legendScale(tick) + 40}, ${legendHeight}) rotate(90)`}>
           <text textAnchor="middle" fontSize="12px" dy="1em">
             {tick.toFixed(2)}
           </text>

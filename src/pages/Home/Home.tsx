@@ -11,9 +11,9 @@ const questions = [
   },
   {
     id: "canadian-federalism",
-    title: "Why both liberals and conservatives call for united Canada in response to Trump-trouble?",
-    topic: "Canada",
-    status: "🧪 Data collected",
+    title: "Why both call for united Canada in response to Trump-trouble?",
+    topic: "New to Canada",
+    status: "🧪 under construction",
     link: "/canadian-federalism",
   },
   // Add more as you go
@@ -50,38 +50,37 @@ export default function Home() {
           </p>
         </div>
       </div>
-
-      <section className="questions">
-        <p className="gallery">🔍 Questions in the gallery</p>
-        <ul className="space-y-4">
-          {questions.map((q) => (
-            <li
-              key={q.id}
-              className="p-4 bg-white rounded-2xl shadow hover:shadow-md transition"
-            >
-              <div className="flex justify-between items-center">
-                <Link to={q.link}>
-                  <h3 className="text-lg font-medium text-blue-600 hover:underline">
-                    {q.title}
-                  </h3>
-                </Link>
-                <span className="text-sm bg-gray-100 px-3 py-1 rounded-full text-gray-700">
-                  {q.topic}
-                </span>
-              </div>
+      <h2>Welcome to the Gallery of Questions</h2>
+      {/* Row 4: display */}
+      <div className="row text-center">
+        <div className="col-3 map">
+          <p>📌 Analytical Roadmap</p>
+          <ul className="van-gogh">
+            <li>Start with a question →</li>
+            <li>Seek reliable data →</li>
+            <li>Tidy and visualize →</li>
+            <li>Feel the pattern →</li>
+            <li>Separate facts from emotions →</li>
+            <li>Reflect and revise →</li>
+            <li>More questions...</li>
+          </ul>
+        </div>
+        {questions.map((q) => (
+          <div key={q.id} className="col-md-3 frame">
+            <div className="in-frame">
+              <Link to={q.link}>
+                <p className="intro mt-5">
+                🔍 {q.title}
+                </p>
+              </Link>
+              <span className="text-sm bg-gray-100 px-3 py-1 rounded-full text-gray-700">
+                    Topic: {q.topic}
+              </span>
               <p className="mt-2 text-sm text-gray-600">Progress: {q.status}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-2">📌 Analytical Methodology</h2>
-        <p className="text-gray-700">
-          Start with a question → Seek reliable data → Tidy and visualize →
-          Separate facts from assumptions → Reflect and revise.
-        </p>
-      </section>
+            </div>
+          </div>
+        ))}
+      </div>
       
     </div>
   );

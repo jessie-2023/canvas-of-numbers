@@ -12,7 +12,7 @@ export const ColorLegend = ({
     colorScale.domain().map((domainValue, i) =>(
         <g
             className="tick"
-            transform={`translate(0,${i * tickSpacing})`}
+            transform={`translate(10, ${i * tickSpacing + 30})`}
             onMouseEnter={() => {
                 onHover(domainValue);
                 console.log(`hoveredValue: ${hoveredValue}`)

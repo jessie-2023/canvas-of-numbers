@@ -61,7 +61,7 @@ export const WorldMap = ({width, height, clickedCountry, clickedYear, setClicked
         clickedCountry={clickedCountry}
 
       />
-      <g transform={`translate(${0},${innerHeight - 100}) rotate(-90)`}>
+      <g transform={`translate(${0},${innerHeight - 400}) rotate(-90)`}>
         <ColorLegend colorScale={colorScale} width={200} height={20} />
       </g>
     </svg>

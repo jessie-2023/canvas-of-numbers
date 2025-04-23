@@ -52,7 +52,7 @@ export const Marks = ({
           <path className="interiors" d={path(interiors) as string} />        
           <path className="clickedCountry" 
                 fill='none'
-                stroke='#BA5F06'
+                stroke='#F2DA5780' //background yellow
                 strokeWidth={2}
                 d={path(clickedFeature) as string} 
           />

@@ -2,7 +2,7 @@
 @use "sass:map";
 
 .starting-point {
-  @include constants.text(main, plain, subheading);
+  @include constants.text(main, plain, paragraph);
   text-align: left;
 }
 .dataviz-title {
@@ -22,8 +22,8 @@
 
 // world map
 .marks .sphere {
-    // fill: transparent;
-    fill: blue; opacity: 0.05;
+    fill: transparent;
+    // fill: blue; opacity: 0.05;
   }
 .marks .interiors {
   fill: none;
@@ -39,11 +39,19 @@
 }
 
 .tick text {
-  fill: #8E8883;
+  fill: map.get(constants.$font-colors, main);
   font-size: 0.7em;
+  font-weight: bold;
 }
 
 .axis-label {
   font-size: 0.7em;
-  fill: #635F5D;
+  font-style: italic;
+  fill:map.get(constants.$font-colors, main);
+}
+
+.note-title {
+  font-size: 1em;
+  font-weight: bold;
+  fill:map.get(constants.$font-colors, light);
 }

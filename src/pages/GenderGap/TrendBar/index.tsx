@@ -10,7 +10,7 @@ import { getGenderGaps } from '../../../api/gitGistClient';
 
 
 
-const margin = { top: 10, right: 200, bottom: 15, left: 200 };
+const margin = { top: 15, right: 200, bottom: 15, left: 200 };
 // const xAxisLabelOffset = 54;
 const yAxisLabelOffset = 30;
 // const xAxisTickFormat = timeFormat('%m/%d/%Y');
@@ -76,24 +76,26 @@ export const TrendBar = ({width, height, setClickedYear , clickedYear, clickedCo
 
   return (<>
     <rect width={width} height={height} fill="red" opacity={0.02} />
-      <g transform={`translate(${margin.left},${margin.top})`}>
+      <g transform={`translate(${margin.left / 2},${margin.top})`}>
         <AxisX
           xScale={xScale}
           innerHeight={innerHeight}
         />
         <AxisY yScale={yScale} innerWidth={innerWidth} tickOffset={5}/>
-        <text
-          className="axis-label"
-          textAnchor="middle"
-          transform={`translate(${-yAxisLabelOffset},${innerHeight /
-            2}) rotate(-90)`}
-        >
-          Gender Gap in {gaps[0].countryName}
-        </text>
-        <g transform={`translate(${innerWidth + 60}, 60)`}>
-          <text x={35} y={-25} className="axis-label" textAnchor="middle">
-            {colorLegendLabel}
+        <g transform={`translate(${innerWidth + 5}, 60)`}>
+          <text x={5} y={-40} className="note-title" textAnchor="start">
+            {gaps[0].countryName}, 2005-2019
           </text>
+          <text x={5} y={-25} className="axis-label" textAnchor="start">
+            - Hover over legdend to see progress in each 
+          </text>
+          <text x={5} y={-10} className="axis-label" textAnchor="start">
+            of the four {colorLegendLabel}
+          </text>
+          <text x={5} y={10} className="axis-label" textAnchor="start">
+            - Click bar to see the world in that year
+          </text>
+
           <ColorLegend
             tickSpacing={22}
             tickSize={15}

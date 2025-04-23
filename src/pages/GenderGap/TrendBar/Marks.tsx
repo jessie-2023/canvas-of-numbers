@@ -34,7 +34,7 @@ export const Marks = ({
               width={xScale.bandwidth()}
               fill={colorScale(colorValue(subIndex))}
               onClick={() => handleYearClick(i)}
-              stroke="#005D6E"
+              stroke="#688BAB80" //background blue
               stroke-width={clickedYear == xValue(i) ? 2 : 0}
             >
               <title>{`${colorValue(subIndex)}: ${Math.round((s[1] - s[0]) * 400)}%`}</title>
