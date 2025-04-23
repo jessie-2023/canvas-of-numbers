@@ -11,7 +11,7 @@ const questions = [
   },
   {
     id: "canadian-federalism",
-    title: "Why both call for united Canada in response to Trump-trouble?",
+    title: "Why are both parties calling for a united Canada in response to political tensions under Trump?",
     topic: "New to Canada",
     status: "🧪 under construction",
     link: "/canadian-federalism",
@@ -53,9 +53,9 @@ export default function Home() {
       <h2>Welcome to the Gallery of Questions</h2>
       {/* Row 4: display */}
       <div className="row text-center">
-        <div className="col-3 map">
+        <div className="col-md-3 map">
           <p>📌 Analytical Roadmap</p>
-          <ul className="van-gogh">
+          <ul>
             <li>Start with a question →</li>
             <li>Seek reliable data →</li>
             <li>Tidy and visualize →</li>
@@ -73,10 +73,10 @@ export default function Home() {
                 🔍 {q.title}
                 </p>
               </Link>
-              <span className="text-sm bg-gray-100 px-3 py-1 rounded-full text-gray-700">
+              <span>
                     Topic: {q.topic}
               </span>
-              <p className="mt-2 text-sm text-gray-600">Progress: {q.status}</p>
+              <p>Progress: {q.status}</p>
             </div>
           </div>
         ))}

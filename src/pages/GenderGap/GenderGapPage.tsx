@@ -10,7 +10,7 @@ const height = 520;
 const mapShare = 0.75;
 const barShare = 0.4;
 
-export default function Home()
+export default function GenderGap()
 {
     const [clickedCountry, setClickedCountry] = useState<number>(352);   
     const [clickedYear, setClickedYear] = useState<number>(2019);
@@ -32,12 +32,12 @@ export default function Home()
     </div>
     <div className="row">
         <div className="col-md-3 reasoning-line">
-            <p>There is huge variance in gender equality across the world, while observable progress been made</p>
+        <p>There is a huge variance in gender equality across the world, although observable progress has been made.</p>
             <ul>
-                <li>Political empowerment is the weakest part, only Scanvandian countries have </li>
-                <li>Most countries are still struggling with provinding equal economic opportunities</li>
-                <li>Half of the countries have equal education condition </li>
-                <li>Most countries have equal health condition, even in Yemen, the lowest score </li>
+            <li>Political empowerment is the weakest dimension; only Scandinavian countries have made significant progress.</li>
+            <li>Most countries are still struggling to provide equal economic opportunities.</li>
+            <li>About half of the countries have achieved equal conditions in education.</li>
+            <li>Most countries have equal health conditions—even Yemen, which has the lowest overall score, performs relatively well in this area.</li>
             </ul>
         </div>
         <div className="col-md-9">
@@ -64,7 +64,7 @@ export default function Home()
                         - Hover to see general information of each country
                     </text>
                     <text x={-50} y={35} className="axis-label" textAnchor="start">
-                        - Click to see country-specific annual progress in bar chart
+                        - Click to see country-specific progress between 2005 and 2019 in bar chart
                     </text>
                 </g>
                 <g transform={`translate(-80, ${height - barShare * height})`}>
@@ -81,12 +81,13 @@ export default function Home()
     </div>
     <div className="row text-start">
         <div className="col-md-12  ">
-            <p><strong className="hook">Follow up questions:</strong></p>
+            <p><strong className="hook">Follow-up questions and next steps:</strong></p>
             <ul>
-                <li>How hard women fight in different countries? Are perceptions consistent with this index? Need attitude/opinion survey data</li>
-                <li>Are gender equality naturally comes along with economic growth?</li>
-                <li>How feminist ideas transmitted across countries?</li>
-                <li>What's the role of technology?</li>
+                <li>Add data between 2020-2023, explore the effect of Covid.</li>
+                <li>How hard do women have to fight in different countries? Are public perceptions consistent with the index? (Requires attitude/opinion survey data)</li>
+                <li>Does gender equality naturally accompany economic growth?</li>
+                <li>How are feminist ideas transmitted across countries?</li>
+                <li>What role does technology play?</li>
             </ul>
         </div>
     </div>
