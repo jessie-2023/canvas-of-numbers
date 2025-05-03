@@ -1,10 +1,12 @@
-import { geoPath, geoGraticule, geoCentroid, geoEquirectangular } from 'd3';
+import { geoNaturalEarth1, geoPath, geoGraticule, geoCentroid } from 'd3';
 // import WorldAltas from '../../models/WorldAtlas';
 import { useState } from 'react';
-import Gap from '../../../models/Gap';
 
 
-const projection = geoEquirectangular();
+
+const projection = geoNaturalEarth1()
+  .scale(960 / (2 * Math.PI) * 1.2) // this ensures the projection width ≈ image width
+  .translate([960 / 2, 520 / 2]); // centers the globe in the SVG
 const path = geoPath(projection);
 const graticule = geoGraticule();
 const missingDataColor = 'url(#gridPattern)';
@@ -15,18 +17,10 @@ export const Marks = ({
   mapByCountry,
   colorScale,
   colorValue,
-  setClickedCountry,
-  clickedCountry
+
 }) =>  {
   const [hoveredCountry, setHoveredCountry] = useState<{ name: string; x: number; y: number } | null>(null);
 
-  const handleCountryClick = (country: Gap) => {
-    setClickedCountry(country.countryId); 
-  };
-  
-  const clickedFeature = countries.features.find(feature => clickedCountry == feature.id)
-
-  // console.log("Hovered country:", hoveredCountry);
 
   return (<g className="marks">
     
@@ -42,7 +36,6 @@ export const Marks = ({
               <path className="land" 
                 fill={country ? colorScale(colorValue(country)) : missingDataColor}
                 d={path(feature) as string} 
-                onClick={() => handleCountryClick(country)}
                 onMouseEnter={() =>
                   setHoveredCountry({ name: feature.properties.name, x: centroid[0], y: centroid[1] })
                 }
@@ -50,13 +43,6 @@ export const Marks = ({
               />)
           })}
           <path className="interiors" d={path(interiors) as string} />        
-          <path className="clickedCountry" 
-                fill='none'
-                stroke='#F2DA5780' //background yellow
-                strokeWidth={2}
-                d={path(clickedFeature) as string} 
-          />
-
           {hoveredCountry && (
             <text
               className="country-label"
