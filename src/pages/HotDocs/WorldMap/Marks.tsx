@@ -1,14 +1,14 @@
-import { geoNaturalEarth1, geoPath, geoGraticule, geoCentroid } from 'd3';
+import { geoPath, geoGraticule, geoCentroid, geoEquirectangular } from 'd3';
 // import WorldAltas from '../../models/WorldAtlas';
 import { useState } from 'react';
 
+const width = 1080;
+const height = 540;
 
-
-const projection = geoNaturalEarth1()
-  .scale(960 / (2 * Math.PI) * 1.2) // this ensures the projection width ≈ image width
-  .translate([960 / 2, 520 / 2]); // centers the globe in the SVG
+const projection = geoEquirectangular()
+  .scale(width / (2 * Math.PI) ) // this ensures the projection width ≈ image width
+  .translate([width / 2, height / 2]); // centers the globe in the SVG
 const path = geoPath(projection);
-const graticule = geoGraticule();
 const missingDataColor = 'url(#gridPattern)';
 
 
@@ -25,13 +25,9 @@ export const Marks = ({
   return (<g className="marks">
     
           <path className="sphere" d={path({ type: 'Sphere' }) as string} />
-          <path className="graticules" d={path(graticule()) as string} />
           {countries.features.map(feature => {
-            // console.log(feature)
             const country = mapByCountry.get(Number(feature.id));
             const centroid = projection(geoCentroid(feature));
-            // console.log(colorScale(colorValue(country)));
-
             return (
               <path className="land" 
                 fill={country ? colorScale(colorValue(country)) : missingDataColor}

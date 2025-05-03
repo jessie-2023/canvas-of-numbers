@@ -59,7 +59,7 @@ export const WorldMap = ({width, height, clickedYear}) => {
         y={0}
         width={width}
         height={height}
-        preserveAspectRatio="none" 
+        preserveAspectRatio="xMidYMid slice" //"none" 
       />
       {/* D3 vector marks overlay */}
       <Marks 
