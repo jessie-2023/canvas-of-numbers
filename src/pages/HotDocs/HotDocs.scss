@@ -1,6 +1,11 @@
 @use '../../styles/constants.scss' as constants;
 @use "sass:map";
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 // world map
 .marks .sphere {

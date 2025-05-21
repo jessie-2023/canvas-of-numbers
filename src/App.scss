@@ -1,8 +1,11 @@
+
+body,
+html,
 #root {
+  width: 100%;
   max-width: 1600px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes logo-spin {

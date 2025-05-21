@@ -47,11 +47,6 @@ export const WorldMap = ({width, height, clickedYear}) => {
   
   return (
     <svg width={width} height={height}>
-      <defs>
-        <pattern id="gridPattern" patternUnits="userSpaceOnUse" width="3" height="3">
-          <path d="M 3 0 L 0 3" fill="none" stroke="#8E8883" stroke-width="0.5" />
-        </pattern>
-      </defs>
       {/* Background Image Layer */}
       <image
         href="images/blueMarbleMay.jpg" 
@@ -68,9 +63,6 @@ export const WorldMap = ({width, height, clickedYear}) => {
         colorScale={colorScale}
         colorValue={colorValue}
       />
-      <g transform={`translate(${0},${innerHeight - 400}) rotate(-90)`}>
-        <ColorLegend colorScale={colorScale} width={200} height={20} />
-      </g>
     </svg>
   );
 };
