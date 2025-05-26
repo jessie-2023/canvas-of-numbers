@@ -1,4 +1,5 @@
-import { scaleLinear } from "d3-scale";
+import { scaleLinear } from 'd3-scale';
+
 // import { interpolateGnBu as colorGradience } from "d3";
 
 interface ColorLegendProps {
@@ -29,7 +30,14 @@ export const ColorLegend = ({ colorScale, width = 300, height = 50 }: ColorLegen
           ))}
         </linearGradient>
       </defs>
-      <rect x={40} y={0} width={legendWidth} height={legendHeight + 15} transform={`translate(${-30}, ${0})`} fill="url(#legend-gradient)" />
+      <rect
+        x={40}
+        y={0}
+        width={legendWidth}
+        height={legendHeight + 15}
+        transform={`translate(${-30}, ${0})`}
+        fill="url(#legend-gradient)"
+      />
       {/* Ticks & Labels */}
       {tickValues.map((tick, i) => (
         <g key={i} transform={`translate(${legendScale(tick) + 40}, ${legendHeight}) rotate(90)`}>

@@ -1,5 +1,5 @@
 @use '../../styles/constants.scss' as constants;
-@use "sass:map";
+@use 'sass:map';
 
 .starting-point {
   @include constants.text(main, plain, paragraph);
@@ -7,35 +7,36 @@
 }
 .dataviz-title {
   @include constants.text(demoblue, fancy, subheading);
-  background-color: #F2DA5760; // 80 = ~50% opacity
-  
+  background-color: #f2da5760; // 80 = ~50% opacity
 }
 .reasoning-line {
-  background-color: #688BAB60;
+  background-color: #688bab60;
   text-align: left;
 }
 
-.hook, .source {
+.hook,
+.source {
   font-size: map.get(constants.$font-sizes, secondary);
   text-align: left;
 }
 
 // world map
 .marks .sphere {
-    fill: transparent;
-    // fill: blue; opacity: 0.05;
-  }
+  fill: transparent;
+  // fill: blue; opacity: 0.05;
+}
 .marks .interiors {
   fill: none;
   stroke: #b0bfc2;
 }
-.marks .graticules, .tick line {
+.marks .graticules,
+.tick line {
   fill: none;
   stroke: #d4d1d1;
 }
 .marks .country-label {
   font-size: 1em;
-  stroke:#8E8883
+  stroke: #8e8883;
 }
 
 .tick text {
@@ -47,11 +48,11 @@
 .axis-label {
   font-size: 0.7em;
   font-style: italic;
-  fill:map.get(constants.$font-colors, main);
+  fill: map.get(constants.$font-colors, main);
 }
 
 .note-title {
   font-size: 1em;
   font-weight: bold;
-  fill:map.get(constants.$font-colors, light);
+  fill: map.get(constants.$font-colors, light);
 }

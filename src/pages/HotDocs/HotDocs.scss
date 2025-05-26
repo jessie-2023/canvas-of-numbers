@@ -1,48 +1,48 @@
 @use '../../styles/constants.scss' as constants;
-@use "sass:map";
+@use 'sass:map';
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 // world map
 .marks .sphere {
-    fill: transparent;
-    // fill: blue; opacity: 0.05;
+  fill: transparent;
+  // fill: blue; opacity: 0.05;
 }
 
 .marks .interiors {
-    fill: none;
-    stroke: #b0bfc2;
+  fill: none;
+  stroke: #b0bfc2;
 }
 
 .marks .graticules,
 .tick line {
-    fill: none;
-    stroke: #d4d1d1;
+  fill: none;
+  stroke: #d4d1d1;
 }
 
 .marks .country-label {
-    font-size: 1em;
-    stroke: #8E8883
+  font-size: 1em;
+  stroke: #8e8883;
 }
 
 .tick text {
-    fill: map.get(constants.$font-colors, main);
-    font-size: 0.7em;
-    font-weight: bold;
+  fill: map.get(constants.$font-colors, main);
+  font-size: 0.7em;
+  font-weight: bold;
 }
 
 .axis-label {
-    font-size: 0.7em;
-    font-style: italic;
-    fill: map.get(constants.$font-colors, main);
+  font-size: 0.7em;
+  font-style: italic;
+  fill: map.get(constants.$font-colors, main);
 }
 
 .note-title {
-    font-size: 1em;
-    font-weight: bold;
-    fill: map.get(constants.$font-colors, light);
+  font-size: 1em;
+  font-weight: bold;
+  fill: map.get(constants.$font-colors, light);
 }

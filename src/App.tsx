@@ -1,14 +1,12 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
-import './App.scss'
-import './styles/constants.scss'
-import Home from './pages/Home/Home'
-import GenderGap from './pages/GenderGap/GenderGapPage'
-import UnitedCanada from './pages/UnitedCanada/UnitedCanadaPage'
-import HotDocs from './pages/HotDocs/HotDocs'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.scss';
+import GenderGap from './pages/GenderGap/GenderGapPage';
+import Home from './pages/Home/Home';
+import HotDocs from './pages/HotDocs/HotDocs';
+import UnitedCanada from './pages/UnitedCanada/UnitedCanadaPage';
+import './styles/constants.scss';
 
-
-function App()
-{
+function App() {
   return (
     <Router>
       <Routes>
@@ -19,6 +17,6 @@ function App()
         {/* <Route path="/gender-gap/country/:id" element={<CountryGenderGap />} /> */}
       </Routes>
     </Router>
-  )
+  );
 }
-export default App
+export default App;
