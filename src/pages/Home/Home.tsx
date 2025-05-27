@@ -17,6 +17,14 @@ const questions = [
     status: '🧪 under construction',
     link: '/canadian-federalism',
   },
+  {
+    id: 'documentaries',
+    title:
+      'Special Exhibition: Feel the world through documentaries',
+    topic: 'HotDocs',
+    status: '🧪 under construction',
+    link: '/documentaries',
+  },
   // Add more as you go
 ];
 

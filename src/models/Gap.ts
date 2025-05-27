@@ -1,8 +1,6 @@
 export default interface Gap {
-  // id: number;
   countryId: number;
   countryName: string;
-  // regionId: number;
   regionName: string;
   year: number;
   generalGap: number;

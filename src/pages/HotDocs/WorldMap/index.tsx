@@ -56,7 +56,7 @@ export const WorldMap = ({ width, height, clickedYear } : WorldMapProps) => {
     <svg width={width} height={height}>
       {/* Background Image Layer */}
       <image
-        href="images/blueMarbleMay.jpg"
+        href="/images/blueMarbleMay.jpg"
         x={0}
         y={0}
         width={width}

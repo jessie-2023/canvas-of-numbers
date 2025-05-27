@@ -1,9 +1,9 @@
 // import WorldAltas from '../../models/WorldAtlas';
 import { useState } from 'react';
-import { geoPath, geoGraticule, geoCentroid, geoEquirectangular } from 'd3';
+import { geoPath, geoGraticule, geoCentroid, geoNaturalEarth1} from 'd3';
 import Gap from '../../../models/Gap';
 
-const projection = geoEquirectangular();
+const projection = geoNaturalEarth1();
 const path = geoPath(projection);
 const graticule = geoGraticule();
 const missingDataColor = 'url(#gridPattern)';
@@ -75,3 +75,7 @@ export const Marks = ({
     </g>
   );
 };
+function NaturalEarth1() {
+  throw new Error('Function not implemented.');
+}
+
