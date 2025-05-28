@@ -5,7 +5,7 @@
   background-size: cover; /* Ensures the image covers the entire container */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
-  max-width: 1280px; /* Makes it span the full width of the viewport */
+  width: 100%; /* Makes it span the full width of the viewport */
   height: 400px; /* Adjust based on the height you want */
 }
 
@@ -33,8 +33,6 @@
   background-color: #b8b49e40;
   margin: 1rem;
   border-radius: 8px;
-  // margin: 0.5rem auto; /* Center the frame horizontally */
-  // padding: 1.5rem; /* Default internal padding */
 }
 
 .gallery {
@@ -42,21 +40,8 @@
   text-align: left;
 }
 
-// .frame {
-//     background-image: url('../../assets/frame.png');
-//     background-size: cover;           /* Ensures the image covers the entire container */
-//     background-position: center;      /* Centers the image */
-//     background-repeat: no-repeat;     /* Prevents the image from repeating */
-//     max-width: 1280px;                     /* Makes it span the full width of the viewport */
-//     width: 100%;
-//     aspect-ratio: 555 / 674; /* Responsive height-to-width ratio */
-//     margin: 0.5rem auto; /* Center the frame horizontally */
-//     padding: 1.5rem; /* Default internal padding */
-// }
-
 .frame {
   aspect-ratio: 555 / 674; /* or whatever matches your frame image */
-  width: 100%;
   background-image: url('../../assets/frame.png');
   background-size: cover;
   background-position: center;
@@ -70,19 +55,15 @@
 .in-frame {
   position: absolute;
   inset: 0;
-  padding: 1.5em;
+  padding: clamp(0.5em, 2vw, 2em);
+  font-size: clamp(0.5rem, 2vw, 1rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
-// .in-frame {
-//     width: 100%;
-//     max-width: 75%; /* Prevent content from touching edges */
-//     margin: 0 auto;
-//     text-align: center;
-// }
 
 .in-frame-question {
-  @include constants.text(main, fancy, subsubheading);
+  font-size: clamp(0.3rem, 2vw, 0.8rem);
+  // @include constants.text(main, fancy, subsubheading);
 }

@@ -17,14 +17,14 @@ const questions = [
     status: '🧪 under construction',
     link: '/canadian-federalism',
   },
-  {
-    id: 'documentaries',
-    title:
-      'Special Exhibition: Feel the world through documentaries',
-    topic: 'HotDocs',
-    status: '🧪 under construction',
-    link: '/documentaries',
-  },
+  // {
+  //   id: 'documentaries',
+  //   title:
+  //     'Special Exhibition: Hot Docs Festival 2025',
+  //   topic: 'Documentary',
+  //   status: '🧪 under construction',
+  //   link: '/documentaries',
+  // },
   // Add more as you go
 ];
 
@@ -78,13 +78,15 @@ export default function Home() {
           </ul>
         </div>
         {questions.map((q) => (
-          <div key={q.id} className="col-md-4 frame">
-            <div className="in-frame">
-              <Link to={q.link}>
-                <p className="in-frame-question mt-5">🔍 {q.title}</p>
-              </Link>
-              <span>Topic: {q.topic}</span>
-              <p>Progress: {q.status}</p>
+          <div key={q.id} className="col-sm-12 col-md-6 col-lg-4">
+            <div className="frame">
+              <div className="in-frame">
+                <Link to={q.link}>
+                  <p className="in-frame-question mt-5">🔍 {q.title}</p>
+                </Link>
+                <span>Topic: {q.topic}</span>
+                <p>Progress: {q.status}</p>
+              </div>
             </div>
           </div>
         ))}
