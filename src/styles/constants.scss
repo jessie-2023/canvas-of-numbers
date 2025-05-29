@@ -55,18 +55,26 @@ $font-styles: (
   ),
 );
 
+// $font-sizes: (
+//   secondary: clamp(0.625rem, 0.538rem + 0.4348vw, 0.875rem),
+//   // 10 - 14
+//   paragraph: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem),
+//   // 16- 18
+//   subsubheading: clamp(1.125rem, 0.9946rem + 0.6522vw, 1.5rem),
+//   // 18 - 24
+//   subheading: clamp(1.25rem, 1.0761rem + 0.8696vw, 1.75rem),
+//   // 20 - 28
+//   heading: clamp(1.5rem, 1.1522rem + 1.7391vw, 2.5rem),
+//   // 24 - 40
+//   title: clamp(2.25rem, 1rem + 2.5vw, 3rem), // 36 - 48
+// );
 $font-sizes: (
-  secondary: clamp(0.625rem, 0.538rem + 0.4348vw, 0.875rem),
-  // 10 - 14
-  paragraph: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem),
-  // 16- 18
-  subsubheading: clamp(1.125rem, 0.9946rem + 0.6522vw, 1.5rem),
-  // 18 - 24
-  subheading: clamp(1.25rem, 1.0761rem + 0.8696vw, 1.75rem),
-  // 20 - 28
-  heading: clamp(1.5rem, 1.1522rem + 1.7391vw, 2.5rem),
-  // 24 - 40
-  title: clamp(2.25rem, 1rem + 2.5vw, 3rem), // 36 - 48
+  secondary: clamp(0.625rem, 0.5rem + 0.4vw, 0.875rem),
+  paragraph: clamp(0.95rem, 0.9rem + 0.3vw, 1.125rem),
+  subsubheading: clamp(1rem, 0.95rem + 0.4vw, 1.25rem),
+  subheading: clamp(1.1rem, 1rem + 0.6vw, 1.5rem),
+  heading: clamp(1.25rem, 1.1rem + 1vw, 2rem),
+  title: clamp(1.75rem, 1.25rem + 1.8vw, 2.5rem),
 );
 
 @mixin text($textColor, $textStyle, $textSize) {

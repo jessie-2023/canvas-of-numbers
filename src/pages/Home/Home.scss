@@ -36,11 +36,21 @@
 }
 
 .gallery {
+  overflow-x: auto;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  // Optional: add horizontal spacing so scroll is visible on touch
+  margin: 0 -1rem;
+  padding: 1rem;
   @include constants.text(light, plain, heading);
   text-align: left;
 }
 
 .frame {
+  width: 330px;
   aspect-ratio: 555 / 674; /* or whatever matches your frame image */
   background-image: url('../../assets/frame.png');
   background-size: cover;
@@ -50,20 +60,32 @@
   border-radius: 8px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  flex-shrink: 0; // Prevent it from shrinking in flex layout
 }
 
 .in-frame {
   position: absolute;
   inset: 0;
+  margin-left: 1rem;
   padding: clamp(0.5em, 2vw, 2em);
-  font-size: clamp(0.5rem, 2vw, 1rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
+  overflow-y: auto; // allow vertical scroll if content overflows
+  max-height: 100%; 
+  max-width: 85%; 
+  word-wrap: break-word;
+  @include constants.text(main, fancy, secondary);
 }
 
 .in-frame-question {
-  font-size: clamp(0.3rem, 2vw, 0.8rem);
-  // @include constants.text(main, fancy, subsubheading);
+  line-height: 1.2;
+  @include constants.text(demoblue, fancy, paragraph);
+  text-align: center;
 }
