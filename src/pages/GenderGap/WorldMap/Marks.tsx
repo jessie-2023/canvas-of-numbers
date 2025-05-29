@@ -1,6 +1,6 @@
 // import WorldAltas from '../../models/WorldAtlas';
 import { useState } from 'react';
-import { geoPath, geoGraticule, geoCentroid, geoNaturalEarth1} from 'd3';
+import { geoPath, geoGraticule, geoCentroid, geoNaturalEarth1 } from 'd3';
 import Gap from '../../../models/Gap';
 
 const projection = geoNaturalEarth1();
@@ -78,4 +78,3 @@ export const Marks = ({
 function NaturalEarth1() {
   throw new Error('Function not implemented.');
 }
-

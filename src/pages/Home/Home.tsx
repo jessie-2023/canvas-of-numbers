@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
+import NavbarTop from '../../components/NavbarTop';
 import './Home.scss';
+import NavbarBottom from '../../components/NavbarBottom';
 
 const questions = [
   {
@@ -11,33 +13,31 @@ const questions = [
   },
   {
     id: 'canadian-federalism',
-    title:
-      'What does \'a united Canada\' really mean?',
+    title: "What does 'a united Canada' really mean?",
     topic: 'New to Canada',
     status: '🧪 under construction',
     link: '/canadian-federalism',
   },
-  
 ];
 
 const specials = [
   {
     id: 'documentaries',
-    title:
-      'Hot Docs Festival 2025',
+    title: 'Hot Docs Festival 2025',
     topic: 'Documentary',
     status: '🧪 under construction',
     link: '/documentaries',
   },
-]
+];
 
 export default function Home() {
   return (
-    <div>
+    <>
+    <NavbarTop />
       {/* Row 1: Van Gogh Header*/}
       <div className="row justify-content-end van-gogh-background">
         <div className="col-md-8 mt-2 ms-2 me-3">
-          <p className=' van-gogh'>
+          <p className=" van-gogh">
             <em>
               Inspired by Van Gogh's bold spirit, Canvas of Numbers is more than just a data
               visualization tool — it's a journey to uncover the deeper truths hidden behind the
@@ -49,7 +49,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className='content-container'>
+      <div className="content-container">
         {/* Row 2: Title */}
         <div className="row justify-content-center text-center mt-3">
           <div className="col-10 title">
@@ -61,8 +61,8 @@ export default function Home() {
           <div className="col-11 intro">
             <p>
               A data exploration wiki where I (and eventually, others) turn curiosity into clarity
-              through visual questions and answers. Each question follows a transparent journey: from
-              asking, to gathering data, to visualization.
+              through visual questions and answers. Each question follows a transparent journey:
+              from asking, to gathering data, to visualization.
             </p>
           </div>
         </div>
@@ -85,35 +85,36 @@ export default function Home() {
           </div>
           <div className="col-md-8 col-sm-12">
             <div className="gallery">
-            {questions.map((q) => (
-              <div key={q.id} className="frame">
-                <div className="in-frame">
-                  <Link to={q.link}>
-                    <p className="in-frame-question mt-5">🔍 {q.title}</p>
-                  </Link>
-                  <span>Topic: {q.topic}</span>
-                  <p>Progress: {q.status}</p>
+              {questions.map((q) => (
+                <div key={q.id} className="frame">
+                  <div className="in-frame">
+                    <Link to={q.link}>
+                      <p className="in-frame-question mt-5">🔍 {q.title}</p>
+                    </Link>
+                    <span>Topic: {q.topic}</span>
+                    <p>Progress: {q.status}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-            </div> 
+              ))}
+            </div>
           </div>
         </div>
         <h2>Special Exhibitions</h2>
         <div className="gallery">
-            {specials.map((q) => (
-              <div key={q.id} className="frame">
-                <div className="in-frame">
-                  <Link to={q.link}>
-                    <p className="in-frame-question mt-5">📽️ {q.title}</p>
-                  </Link>
-                  <span>Topic: {q.topic}</span>
-                  <p>Progress: {q.status}</p>
-                </div>
+          {specials.map((q) => (
+            <div key={q.id} className="frame">
+              <div className="in-frame">
+                <Link to={q.link}>
+                  <p className="in-frame-question mt-5">📽️ {q.title}</p>
+                </Link>
+                <span>Topic: {q.topic}</span>
+                <p>Progress: {q.status}</p>
               </div>
-            ))}
-          </div> 
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+      <NavbarBottom />
+    </>
   );
 }

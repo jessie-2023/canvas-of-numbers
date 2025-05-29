@@ -1,0 +1,77 @@
+$background-color: #E6A5ABff; //#FDE756ff;// #905919ff; // //
+
+.canvas-header {
+    .navbar {
+        border-bottom: 1px solid #ddd;
+        // background-color: $background-color;
+        font-family: 'EB Garamond', serif;
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: clamp(1.2rem, 1vw + 1rem, 2rem);
+            color: #00557f;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        .nav-link {
+            font-size: clamp(0.9rem, 0.5vw + 0.8rem, 1.1rem);
+            color: #333;
+            margin-left: 1rem;
+            transition: color 0.2s ease-in-out;
+
+            &:hover {
+                color: #00557f;
+                text-decoration: underline;
+            }
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+    }
+}
+
+.canvas-footer {
+    background-color: $background-color;
+    border-top: 1px solid #ddd;
+    font-family: 'EB Garamond', serif;
+
+    .footer-title {
+        font-size: clamp(1rem, 1vw + 0.8rem, 1.5rem);
+        font-weight: bold;
+        color: #333;
+    }
+
+    .footer-links {
+        margin-bottom: 0.5rem;
+
+        a {
+            color: #00557f;
+            text-decoration: none;
+            font-size: clamp(0.85rem, 0.5vw + 0.7rem, 1rem);
+            margin: 0 0.5rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .small {
+        font-size: 0.75rem;
+        color: #888;
+    }
+
+    .footer-icons {
+        a {
+            color: #444;
+            margin: 0 0.5rem;
+            font-size: 1.4rem;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #00557f; // or your accent color
+            }
+        }     
+    }
+}

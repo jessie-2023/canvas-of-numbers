@@ -12,12 +12,12 @@ import { ColorLegend } from './ColorLegend';
 import { Marks } from './Marks';
 
 interface WorldMapProps {
-  width: number
-  height: number
-  clickedYear: number
+  width: number;
+  height: number;
+  clickedYear: number;
 }
 
-export const WorldMap = ({ width, height, clickedYear } : WorldMapProps) => {
+export const WorldMap = ({ width, height, clickedYear }: WorldMapProps) => {
   const [world, setWorld] = useState<WorldAtlas>();
   const [gaps, setGaps] = useState<Gap[]>();
 

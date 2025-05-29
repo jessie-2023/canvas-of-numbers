@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import NavbarTop from '../../components/NavbarTop';
 import './GenderGap.scss';
 import { TrendBar } from './TrendBar';
 import { WorldMap } from './WorldMap';
+import NavbarBottom from '../../components/NavbarBottom';
 
 const width = 960;
 const height = 520;
@@ -15,6 +17,7 @@ export default function GenderGap() {
 
   return (
     <>
+      <NavbarTop />
       <div className="row">
         <div className="col-md-3 starting-point">
           <p>
@@ -111,6 +114,7 @@ export default function GenderGap() {
           </ul>
         </div>
       </div>
+    <NavbarBottom />
     </>
   );
 }

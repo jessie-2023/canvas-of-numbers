@@ -11,7 +11,19 @@ import WorldAtlas from '../../../models/WorldAtlas';
 import { ColorLegend } from './ColorLegend';
 import { Marks } from './Marks';
 
-export const WorldMap = ({ width, height, clickedCountry, clickedYear, setClickedCountry } : { width : number, height : number, clickedCountry : number, clickedYear : number, setClickedCountry : number }) => {
+export const WorldMap = ({
+  width,
+  height,
+  clickedCountry,
+  clickedYear,
+  setClickedCountry,
+}: {
+  width: number;
+  height: number;
+  clickedCountry: number;
+  clickedYear: number;
+  setClickedCountry: number;
+}) => {
   const [world, setWorld] = useState<WorldAtlas>();
   const [gaps, setGaps] = useState<Gap[]>();
 
