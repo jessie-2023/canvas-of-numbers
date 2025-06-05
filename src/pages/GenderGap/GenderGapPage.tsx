@@ -18,13 +18,14 @@ export default function GenderGap() {
   return (
     <>
       <NavbarTop />
+      <div className="content-container">
       <div className="row">
-        <div className="col-md-3 starting-point">
+        <div className="col-md-3 starting-point mt-3">
           <p>
             <strong className="hook">Initial Question:</strong> <em>Why women fight?</em>
           </p>
         </div>
-        <div className="col-md-9 dataviz-title">
+        <div className="col-md-9 dataviz-title mt-3">
           <p>The big picture: How Far Have We Come? </p>
           <p className="source">
             Main data: &nbsp;
@@ -113,7 +114,8 @@ export default function GenderGap() {
             <li>What role does technology play?</li>
           </ul>
         </div>
-      </div>
+        </div>
+        </div>
     <NavbarBottom />
     </>
   );

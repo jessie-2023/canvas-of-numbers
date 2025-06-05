@@ -7,10 +7,10 @@
 }
 .dataviz-title {
   @include constants.text(demoblue, fancy, subheading);
-  background-color: #f2da5760; // 80 = ~50% opacity
+  background-color: constants.$brand-yellow; //#f2da57; // 80 = ~50% opacity
 }
 .reasoning-line {
-  background-color: #688bab60;
+  background-color: constants.$brand-bg;//#688bab60;
   text-align: left;
 }
 

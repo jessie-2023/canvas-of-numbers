@@ -1,26 +1,25 @@
-$background-color: #E6A5ABff; //#FDE756ff;// #905919ff; // //
+@use '../styles/constants.scss' as constants;
 
 .canvas-header {
     .navbar {
         border-bottom: 1px solid #ddd;
-        // background-color: $background-color;
         font-family: 'EB Garamond', serif;
-
+        background-color: constants.$brand-bg;
         .navbar-brand {
             font-weight: bold;
             font-size: clamp(1.2rem, 1vw + 1rem, 2rem);
-            color: #00557f;
+            color: constants.$brand-blue;
             text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
         }
 
         .nav-link {
             font-size: clamp(0.9rem, 0.5vw + 0.8rem, 1.1rem);
-            color: #333;
+            color: constants.$brand-dark;
             margin-left: 1rem;
             transition: color 0.2s ease-in-out;
 
             &:hover {
-                color: #00557f;
+                color: constants.$brand-blue;
                 text-decoration: underline;
             }
         }
@@ -34,18 +33,18 @@ $background-color: #E6A5ABff; //#FDE756ff;// #905919ff; // //
 .canvas-footer {
     border-top: 1px solid #ddd;
     font-family: 'EB Garamond', serif;
-
+    background-color: constants.$brand-bg;
     .footer-title {
         font-size: clamp(1rem, 1vw + 0.8rem, 1.5rem);
         font-weight: bold;
-        color: #333;
+        color: constants.$brand-dark;
     }
 
     .footer-links {
         margin-bottom: 0.5rem;
 
         a {
-            color: #00557f;
+            color: constants.$brand-blue;
             text-decoration: none;
             font-size: clamp(0.85rem, 0.5vw + 0.7rem, 1rem);
             margin: 0 0.5rem;
@@ -58,18 +57,18 @@ $background-color: #E6A5ABff; //#FDE756ff;// #905919ff; // //
 
     .small {
         font-size: 0.75rem;
-        color: #888;
+        color: constants.$brand-dark;
     }
 
     .footer-icons {
         a {
-            color: #444;
+            color: constants.$brand-dark;
             margin: 0 0.5rem;
             font-size: 1.4rem;
             transition: color 0.3s ease;
 
             &:hover {
-                color: #00557f; // or your accent color
+                color: constants.$brand-blue; // or your accent color
             }
         }     
     }

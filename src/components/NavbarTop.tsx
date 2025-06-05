@@ -6,9 +6,9 @@ import './Navbar.scss';
 export default function NavbarTop() {
   return (
     <header className="canvas-header">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light px-3">
+      <nav className="navbar navbar-expand-lg navbar-light px-3">
         <Link to="/" className="navbar-brand">
-          🎨 Canvas of Numbers
+          Canvas of Numbers
         </Link>
         <button
           className="navbar-toggler"
@@ -20,7 +20,7 @@ export default function NavbarTop() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarContent">
-          <ul className="navbar-nav ms-auto bg-light ">
+          <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link to="/questions" className="nav-link">
                 Questions

@@ -70,6 +70,7 @@ export default function Home() {
         {/* Row 4: display */}
         <div className="row text-center">
           <div className="col-md-4 col-sm-12">
+            <div className='map-container'>
             <div className="map">
               <p>📌 Analytical Roadmap</p>
               <ul>
@@ -81,6 +82,7 @@ export default function Home() {
                 <li>Reflect and revise →</li>
                 <li>More questions...</li>
               </ul>
+            </div>
             </div>
           </div>
           <div className="col-md-8 col-sm-12">

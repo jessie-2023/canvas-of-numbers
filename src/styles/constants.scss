@@ -33,11 +33,19 @@ $tabletMinWidth: 768px;
   position: relative;
 }
 
+/* van-gogh */
+$brand-blue: #2E9AD8ff;
+$khaki: #AC9E93ff;
+$brand-yellow: #FECF00ff;
+$brand-dark: #18262Aff;
+$brand-silver: #B3B3B3ff;
+$brand-bg: #efecea;
+
 // text font
 $font-colors: (
-  main: #635f5d,
-  light: #8e8883,
-  demoblue: #688bab,
+  main: $brand-dark, //#635f5d,
+  light: $brand-silver, //#8e8883,
+  demoblue: $brand-blue,// #688bab,
   purple: #8e6c8a,
   green: #0f8c79,
   background: #efecea,
