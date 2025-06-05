@@ -8,38 +8,32 @@
 }
 
 // world map
-.marks .sphere {
-  fill: transparent;
-  // fill: blue; opacity: 0.05;
+.marks {
+  .sphere {
+    fill: transparent;
+  }
+
+  .interiors {
+    fill: transparent;
+    stroke: #545a6d;
+  }
+
+  .land {
+    fill: transparent;
+    stroke: #545a6d;
+
+    &:hover {
+      fill: constants.$brand-yellow;
+    }
+  }
+
+  .country-label {
+    font-size: 1em;
+    stroke: #8e8883;
+  }
 }
 
-.marks .interiors {
-  fill: none;
-  stroke: #b0bfc2;
-}
 
-.marks .graticules,
-.tick line {
-  fill: none;
-  stroke: #d4d1d1;
-}
-
-.marks .country-label {
-  font-size: 1em;
-  stroke: #8e8883;
-}
-
-.tick text {
-  fill: map.get(constants.$font-colors, main);
-  font-size: 0.7em;
-  font-weight: bold;
-}
-
-.axis-label {
-  font-size: 0.7em;
-  font-style: italic;
-  fill: map.get(constants.$font-colors, main);
-}
 
 .note-title {
   font-size: 1em;

@@ -1,6 +1,6 @@
 // import WorldAltas from '../../models/WorldAtlas';
 import { useState } from 'react';
-import { geoPath, geoGraticule, geoCentroid, geoEquirectangular } from 'd3';
+import { geoPath, geoCentroid, geoEquirectangular} from 'd3';
 
 const width = 1080;
 const height = 540;
@@ -9,13 +9,10 @@ const projection = geoEquirectangular()
   .scale(width / (2 * Math.PI)) // this ensures the projection width ≈ image width
   .translate([width / 2, height / 2]); // centers the globe in the SVG
 const path = geoPath(projection);
-const missingDataColor = 'url(#gridPattern)';
 
 export const Marks = ({
   world: { countries, interiors },
   mapByCountry,
-  colorScale,
-  colorValue,
 }) => {
   const [hoveredCountry, setHoveredCountry] = useState<{
     name: string;
@@ -32,7 +29,6 @@ export const Marks = ({
         return (
           <path
             className="land"
-            fill={country ? colorScale(colorValue(country)) : missingDataColor}
             d={path(feature) as string}
             onMouseEnter={() =>
               setHoveredCountry({ name: feature.properties.name, x: centroid[0], y: centroid[1] })

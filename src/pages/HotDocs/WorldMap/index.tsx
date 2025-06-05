@@ -14,12 +14,11 @@ import blueMarbleImage from '../../../assets/blueMarbleMay.jpg';
 interface WorldMapProps {
   width: number;
   height: number;
-  clickedYear: number;
 }
 
-export const WorldMap = ({ width, height, clickedYear }: WorldMapProps) => {
+export const WorldMap = ({ width, height }: WorldMapProps) => {
   const [world, setWorld] = useState<WorldAtlas>();
-  const [gaps, setGaps] = useState<Gap[]>();
+  // const [gaps, setGaps] = useState<Gap[]>();
 
   useEffect(() => {
     getWorldAtlas().then((topology: Topology) => {
@@ -31,45 +30,35 @@ export const WorldMap = ({ width, height, clickedYear }: WorldMapProps) => {
     });
   }, []);
 
-  useEffect(() => {
-    getGenderGaps().then((data: Gap[]) => {
-      // console.log(data.filter(gap => gap.year === clickedYear))
-      setGaps(data.filter((gap) => gap.year === clickedYear));
-    });
-  }, [clickedYear]);
+  // useEffect(() => {
+  //   getGenderGaps().then((data: Gap[]) => {
+  //     // console.log(data.filter(gap => gap.year === clickedYear))
+  //     setGaps(data.filter((gap) => gap.year === clickedYear));
+  //   });
+  // }, [clickedYear]);
 
-  if (!world || !gaps || !gaps.length) {
+  if (!world ) {
     return <p>Loading...</p>;
   }
 
   const mapByCountry = new Map();
-  gaps.forEach((country) => mapByCountry.set(country.countryId, country));
-
-  const colorValue = (gap: Gap) => gap.generalGap;
-  const colorScale = scaleSequential(colorGradience).domain([
-    // swap min-max order can reverse the color gradience
-    1,
-    0.451, // promise min & max are NOT undefined
-  ]);
+  // gaps.forEach((country) => mapByCountry.set(country.countryId, country));
 
   return (
     <svg width={width} height={height}>
       {/* Background Image Layer */}
       <image
-        // href="/images/blueMarbleMay.jpg"
         href={blueMarbleImage}
         x={0}
         y={0}
         width={width}
         height={height}
-        preserveAspectRatio="xMidYMid slice" //"none"
+        preserveAspectRatio="xMidYMid slice" 
       />
       {/* D3 vector marks overlay */}
       <Marks
         world={world}
         mapByCountry={mapByCountry}
-        colorScale={colorScale}
-        colorValue={colorValue}
       />
     </svg>
   );
