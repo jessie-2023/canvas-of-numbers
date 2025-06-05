@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { interpolateGnBu as colorGradience, max, min } from 'd3';
+import { interpolateGnBu as colorGradience } from 'd3';
 import { scaleSequential } from 'd3-scale';
 import { FeatureCollection } from 'geojson';
 import { feature, mesh } from 'topojson';
@@ -8,8 +8,8 @@ import { getGenderGaps } from '../../../api/gitGistClient';
 import getWorldAtlas from '../../../api/worldAtlasClient';
 import Gap from '../../../models/Gap';
 import WorldAtlas from '../../../models/WorldAtlas';
-import { ColorLegend } from './ColorLegend';
 import { Marks } from './Marks';
+import blueMarbleImage from '../../../assets/blueMarbleMay.jpg';
 
 interface WorldMapProps {
   width: number;
@@ -56,7 +56,8 @@ export const WorldMap = ({ width, height, clickedYear }: WorldMapProps) => {
     <svg width={width} height={height}>
       {/* Background Image Layer */}
       <image
-        href="/images/blueMarbleMay.jpg"
+        // href="/images/blueMarbleMay.jpg"
+        href={blueMarbleImage}
         x={0}
         y={0}
         width={width}

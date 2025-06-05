@@ -1,3 +1,14 @@
+import NavbarBottom from "../../components/NavbarBottom";
+import NavbarTop from "../../components/NavbarTop";
+
 export default function UnitedCanada() {
-  return <h1>Coming Soon ......</h1>;
+  return (
+      <>
+      <NavbarTop />
+      <div className="content-container">
+        <h1>Coming Soon ......</h1>;
+      </div>
+      <NavbarBottom />
+      </>
+    );
 }
