@@ -30,7 +30,7 @@
 .map {
   @include constants.text(demoblue, fancy, paragraph);
   text-align: left;
-  background-color: #b8b49e40;
+  background-color: #f2da5760; // 80 = ~50% opacity #b8b49e40;
   margin: 1rem;
   border-radius: 8px;
 }

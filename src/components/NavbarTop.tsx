@@ -20,7 +20,7 @@ export default function NavbarTop() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarContent">
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto bg-light ">
             <li className="nav-item">
               <Link to="/questions" className="nav-link">
                 Questions
