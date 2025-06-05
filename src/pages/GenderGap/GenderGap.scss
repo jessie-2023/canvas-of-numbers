@@ -1,21 +1,72 @@
 @use '../../styles/constants.scss' as constants;
 @use 'sass:map';
 
+.content-container {
+  @include constants.space(padding, 5);
+}
+
+.section-intro {
+  @include constants.space(margin, 4, bottom);
+}
+
+.section-main {
+  @include constants.space(margin, 6, bottom);
+}
+
+.section-followup {
+  @include constants.space(margin, 6, top);
+}
+
 .starting-point {
   @include constants.text(main, plain, paragraph);
+  @include constants.space(padding, 4);
   text-align: left;
+
+  p {
+      @include constants.space(margin, 0);
+    }
 }
+
 .dataviz-title {
   @include constants.text(demoblue, fancy, subheading);
+  @include constants.space(padding, 4);
   background-color: constants.$brand-yellow; //#f2da57; // 80 = ~50% opacity
+
+  p {
+      @include constants.space(margin, 2, bottom);
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 }
+
 .reasoning-line {
+  @include constants.space(padding, 4);
   background-color: constants.$brand-bg;//#688bab60;
   text-align: left;
+
+  p {
+      @include constants.space(margin, 3, bottom);
+    }
+  
+    ul {
+      @include constants.space(margin, 0);
+      @include constants.space(padding, 4, left);
+  
+      li {
+        @include constants.space(margin, 2, bottom);
+      }
+    }
+}
+
+.visualization-container {
+  @include constants.space(padding, 3);
 }
 
 .hook,
 .source {
+  color: constants.$brand-dark;
   font-size: map.get(constants.$font-sizes, secondary);
   text-align: left;
 }

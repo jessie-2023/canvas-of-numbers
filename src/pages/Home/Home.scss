@@ -11,22 +11,34 @@
 
 .van-gogh {
   @include constants.text(demoblue, plain, paragraph);
+  @include constants.space(padding, 4);
+  @include constants.space(margin, 3);
   text-align: right;
 }
+
+.content-container {
+  @include constants.space(padding, 5);
+}
+
 .feel {
   @include constants.text(green, plain, paragraph);
 }
 
 .title {
-  @include constants.text(light, fancy, title);
+  @include constants.text(demoblue, fancy, title);
+  @include constants.space(margin, 6, top);
   text-align: center;
 }
 
 .intro {
   @include constants.text(main, fancy, subheading);
+  @include constants.space(margin, 4, bottom);
   text-align: center;
 }
 
+h2 {
+  color: constants.$brand-dark;
+}
 .map-container {
   display: flex;
   justify-content: center;
@@ -34,23 +46,20 @@
 
 .map {
   @include constants.text(demoblue, fancy, paragraph);
+  @include constants.space(padding, 4);
+  @include constants.space(margin, 4);
   text-align: left;
   background-color: constants.$brand-bg; // #f2da57; // 80 = ~50% opacity #b8b49e40;
-  padding: 1rem;
-  margin: 1rem;
   border-radius: 8px;
 }
 
 .gallery {
   overflow-x: auto;
   display: flex;
-  gap: 1rem;
-  padding: 1rem;
+  @include constants.space(gap, 4);
+  @include constants.space(padding, 4);
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  // Optional: add horizontal spacing so scroll is visible on touch
-  margin: 0 -1rem;
-  padding: 1rem;
   @include constants.text(light, plain, heading);
   text-align: left;
 }
@@ -76,8 +85,8 @@
 .in-frame {
   position: absolute;
   inset: 0;
-  margin-left: 1rem;
-  padding: clamp(0.5em, 2vw, 2em);
+  @include constants.space(margin, 4, left);
+  @include constants.space(padding, 6);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,6 +100,7 @@
 }
 
 .in-frame-question {
+  @include constants.space(margin, 5, top);
   line-height: 1.2;
   @include constants.text(demoblue, fancy, paragraph);
   text-align: center;

@@ -6,8 +6,8 @@ import { TrendBar } from './TrendBar';
 import { WorldMap } from './WorldMap';
 import NavbarBottom from '../../components/NavbarBottom';
 
-const width = 960;
-const height = 520;
+const width = 1200;
+const height = 650;
 const mapShare = 0.75;
 const barShare = 0.4;
 
@@ -19,13 +19,13 @@ export default function GenderGap() {
     <>
       <NavbarTop />
       <div className="content-container">
-      <div className="row">
-        <div className="col-md-3 starting-point mt-3">
+      <div className="row section-intro">
+        <div className="col-md-3 starting-point">
           <p>
             <strong className="hook">Initial Question:</strong> <em>Why women fight?</em>
           </p>
         </div>
-        <div className="col-md-9 dataviz-title mt-3">
+        <div className="col-md-9 dataviz-title">
           <p>The big picture: How Far Have We Come? </p>
           <p className="source">
             Main data: &nbsp;
@@ -40,7 +40,7 @@ export default function GenderGap() {
           </p>
         </div>
       </div>
-      <div className="row">
+      <div className="row section-main">
         <div className="col-md-3 reasoning-line">
           <p>
             There is a huge variance in gender equality across the world, although observable
@@ -59,7 +59,7 @@ export default function GenderGap() {
             </li>
           </ul>
         </div>
-        <div className="col-md-9">
+        <div className="col-md-9 visualization-container">
           <svg
             viewBox={`0 0 ${width} ${height}`}
             preserveAspectRatio="xMidYMid meet"
@@ -98,8 +98,8 @@ export default function GenderGap() {
           </svg>
         </div>
       </div>
-      <div className="row text-start">
-        <div className="col-md-12  ">
+      <div className="row section-followup">
+        <div className="col-md-12">
           <p>
             <strong className="hook">Follow-up questions and next steps:</strong>
           </p>

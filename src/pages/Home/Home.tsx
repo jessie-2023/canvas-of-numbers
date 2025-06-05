@@ -36,7 +36,7 @@ export default function Home() {
     <NavbarTop />
       {/* Row 1: Van Gogh Header*/}
       <div className="row justify-content-end van-gogh-background">
-        <div className="col-md-8 mt-2 ms-2 me-3">
+        <div className="col-md-8">
           <p className=" van-gogh">
             <em>
               Inspired by Van Gogh's bold spirit, Canvas of Numbers is more than just a data
@@ -51,7 +51,7 @@ export default function Home() {
       </div>
       <div className="content-container">
         {/* Row 2: Title */}
-        <div className="row justify-content-center text-center mt-3">
+        <div className="row justify-content-center text-center">
           <div className="col-10 title">
             <p>Canvas of Numbers: Where Data Meets Insight</p>
           </div>
@@ -107,7 +107,7 @@ export default function Home() {
             <div key={q.id} className="frame">
               <div className="in-frame">
                 <Link to={q.link}>
-                  <p className="in-frame-question mt-5">📽️ {q.title}</p>
+                  <p className="in-frame-question">📽️ {q.title}</p>
                 </Link>
                 <span>Topic: {q.topic}</span>
                 <p>Progress: {q.status}</p>
