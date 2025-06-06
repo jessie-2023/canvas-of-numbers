@@ -21,7 +21,7 @@ export const Marks = ({
   } | null>(null);
 
   return (
-    <g className="marks">
+    <g className="hotDocs-marks">
       <path className="sphere" d={path({ type: 'Sphere' }) as string} />
       {countries.features.map((feature) => {
         const country = mapByCountry.get(Number(feature.id));

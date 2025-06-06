@@ -75,6 +75,3 @@ export const Marks = ({
     </g>
   );
 };
-function NaturalEarth1() {
-  throw new Error('Function not implemented.');
-}

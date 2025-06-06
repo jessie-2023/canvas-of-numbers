@@ -8,7 +8,7 @@
 }
 
 // world map
-.marks {
+.hotDocs-marks {
   .sphere {
     fill: transparent;
   }
@@ -29,7 +29,7 @@
 
   .country-label {
     font-size: 1em;
-    stroke: #8e8883;
+    stroke: constants.$brand-blue;
   }
 }
 

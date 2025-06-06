@@ -1,12 +1,8 @@
 import { useEffect, useState } from 'react';
-import { interpolateGnBu as colorGradience } from 'd3';
-import { scaleSequential } from 'd3-scale';
 import { FeatureCollection } from 'geojson';
 import { feature, mesh } from 'topojson';
 import { GeometryObject, Topology } from 'topojson-specification';
-import { getGenderGaps } from '../../../api/gitGistClient';
 import getWorldAtlas from '../../../api/worldAtlasClient';
-import Gap from '../../../models/Gap';
 import WorldAtlas from '../../../models/WorldAtlas';
 import { Marks } from './Marks';
 import blueMarbleImage from '../../../assets/blueMarbleMay.jpg';
@@ -18,7 +14,6 @@ interface WorldMapProps {
 
 export const WorldMap = ({ width, height }: WorldMapProps) => {
   const [world, setWorld] = useState<WorldAtlas>();
-  // const [gaps, setGaps] = useState<Gap[]>();
 
   useEffect(() => {
     getWorldAtlas().then((topology: Topology) => {
@@ -30,19 +25,11 @@ export const WorldMap = ({ width, height }: WorldMapProps) => {
     });
   }, []);
 
-  // useEffect(() => {
-  //   getGenderGaps().then((data: Gap[]) => {
-  //     // console.log(data.filter(gap => gap.year === clickedYear))
-  //     setGaps(data.filter((gap) => gap.year === clickedYear));
-  //   });
-  // }, [clickedYear]);
-
   if (!world ) {
     return <p>Loading...</p>;
   }
 
   const mapByCountry = new Map();
-  // gaps.forEach((country) => mapByCountry.set(country.countryId, country));
 
   return (
     <svg width={width} height={height}>
